@@ -1,0 +1,28 @@
+#! /bin/sh
+
+# If refreshing bspwm, remove all previous rules to prevent doubling up.
+bspc rule -r "*"
+
+sxhkd &
+$HOME/.config/polybar/launch.sh
+
+primary="$(bspc query -M | head -n 1)"
+secondary="$(bspc query -M | tail -n 1)"
+
+bspc monitor $primary -d 1 2 3 4 5
+bspc monitor $secondary -d 6 7 8 9 10
+
+bspc config border_width          2
+bspc config window_gap            10
+bspc config top_padding	     	  27
+
+bspc config split_ratio           0.52
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true
+bspc config focused_border_color  \#5E81AC
+
+bspc rule -a Firefox desktop='^6' follow=on
+bspc rule -a Chromium desktop='^7'
+bspc rule -a Brave-browser desktop='^7'
+

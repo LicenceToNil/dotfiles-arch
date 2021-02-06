@@ -1,0 +1,6 @@
+[user]
+	name = Michael Robins
+	email = mwrobins@gmail.com
+[core]
+	editor = vim
+	autocrlf = input

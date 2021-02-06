@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-fill --randomize ~/Pictures/wallpaper/single-monitor/* --bg-fill --randomize ~/Pictures/wallpaper/single-monitor/*

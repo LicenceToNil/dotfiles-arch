@@ -1,0 +1,40 @@
+{
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "solid",
+  "editor.scrollBeyondLastLine": false,
+  "editor.formatOnSave": true,
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "keyboard.dispatch": "keyCode",
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.iconTheme": "material-icon-theme",
+  "emmet.triggerExpansionOnTab": true,
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 1,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "zenMode.hideTabs": false,
+  "zenMode.hideLineNumbers": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust"
+  },
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/vim"
+}

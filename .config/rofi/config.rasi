@@ -1,0 +1,6 @@
+configuration {
+    modi: "run,ssh,drun";
+    font: "Fira Sans 14";
+    theme: "nord";
+    monitor: "DP-2.8";
+}
