@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	st
 
 # program launcher
 super + d
@@ -12,11 +12,11 @@ super + d
 
 # sleep
 super + alt + z
-	sudo zzz
+	sudo systemctl suspend
 
 # poweroff
 super + alt + s
-	sudo shutdown -h now
+	sudo systemctl poweroff
 
 # toggle compositor
 super + shift + p
@@ -26,19 +26,15 @@ super + shift + p
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# launch lf
-super + o
-	alacritty -e lf
-
 # Pulseaudio control
 XF86AudioRaiseVolume
-    pamixer -i 5
+        amixer -q sset Master 5%+ 
 
 XF86AudioLowerVolume
-    pamixer -d 5
+        amixer -q sset Master 5%-
 
 XF86AudioMute
-    pamixer -t
+        amixer -q sset Master toggle
 
 #
 # bspwm hotkeys

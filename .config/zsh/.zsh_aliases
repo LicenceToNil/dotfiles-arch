@@ -1,5 +1,5 @@
-alias xi='sudo xbps-install -S'
-alias xq='sudo xbps-query -Rs'
+alias xi='sudo pacman -Syu --needed'
+alias xq='pacman -Ss'
 alias la='ls -lAFh --color=auto'   #long list,show almost all,show type,human readable
 alias lr='ls -tRFh --color=auto'   #sorted by date,recursive,show type,human readable
 alias lt='ls -ltFh --color=auto'   #long list,sorted by date,show type,human readable

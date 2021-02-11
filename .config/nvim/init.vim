@@ -22,7 +22,7 @@ else
   Plug 'tpope/vim-commentary'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ptzz/lf.vim'
-  Plug 'rbgrouleff/bclose.vim'
+  Plug 'voldikss/vim-floaterm'
   Plug 'itchyny/lightline.vim'
   Plug 'joshdick/onedark.vim'
   Plug 'arcticicestudio/nord-vim'
@@ -30,7 +30,6 @@ else
   Plug 'junegunn/fzf.vim'
   Plug 'ap/vim-buftabline'
   Plug 'mattn/emmet-vim'
-  Plug 'voldikss/vim-floaterm'
   Plug 'sbdchd/neoformat'
   Plug 'editorconfig/editorconfig-vim'
   call plug#end()
@@ -60,7 +59,9 @@ else
   set backupcopy=yes
   let loaded_matchparen = 1
   let g:lf_replace_netrw = 1
-  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o     " disables auto-comment
+  let g:floaterm_width = 0.7
+  let g:floaterm_height = 0.7
+  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  " disables auto-comment
 
   " Keybindings ----------------------
   noremap <leader>w :w<cr>
