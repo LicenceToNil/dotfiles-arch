@@ -1,5 +1,5 @@
 xrdb merge ~/.Xresources
-xset r rate 300 40
+xset r rate 300 40 
 fehrand &
-picom -b --experimental-backends &
+picom --experimental-backends &
 exec bspwm
