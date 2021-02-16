@@ -18,8 +18,10 @@ else
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'sheerun/vim-polyglot'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-endwise'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ptzz/lf.vim'
   Plug 'voldikss/vim-floaterm'
