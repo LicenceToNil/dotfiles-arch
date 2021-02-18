@@ -18,7 +18,7 @@ else
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'sheerun/vim-polyglot'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-endwise'
@@ -30,10 +30,10 @@ else
   Plug 'arcticicestudio/nord-vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
   Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/goyo.vim'
   Plug 'ap/vim-buftabline'
   Plug 'mattn/emmet-vim'
   Plug 'sbdchd/neoformat'
-  Plug 'editorconfig/editorconfig-vim'
   call plug#end()
 
   " Lightline color scheme
@@ -59,11 +59,16 @@ else
   set softtabstop=2
   set splitbelow splitright
   set backupcopy=yes
+  set scrolloff=10
   let loaded_matchparen = 1
   let g:lf_replace_netrw = 1
   let g:floaterm_width = 0.7
   let g:floaterm_height = 0.7
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  " disables auto-comment
+  augroup filetypedetect
+    au BufRead,BufNewFile *.cr setfiletype crystal
+  augroup END
+  autocmd BufNewFile,BufRead *.cr set syntax=ruby
 
   " Keybindings ----------------------
   noremap <leader>w :w<cr>
@@ -75,6 +80,7 @@ else
   nnoremap Q <nop>
   let g:floaterm_keymap_toggle = '<Leader>t'
   nnoremap gd :lua vim.lsp.buf.hover()<CR>
+  noremap <leader>g :Goyo<CR>
 
   " Shortcutting split navigation, saving a keypress:
   map <C-h> <C-w>h
