@@ -34,9 +34,9 @@ else
   Plug 'ap/vim-buftabline'
   Plug 'mattn/emmet-vim'
   Plug 'sbdchd/neoformat'
+  Plug 'vim-crystal/vim-crystal'
+  Plug 'elixir-editors/vim-elixir'
   call plug#end()
-
-  " Lightline color scheme
 
   " General Settings --------------------------
   let mapleader = ","
@@ -65,10 +65,6 @@ else
   let g:floaterm_width = 0.7
   let g:floaterm_height = 0.7
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  " disables auto-comment
-  augroup filetypedetect
-    au BufRead,BufNewFile *.cr setfiletype crystal
-  augroup END
-  autocmd BufNewFile,BufRead *.cr set syntax=ruby
 
   " Keybindings ----------------------
   noremap <leader>w :w<cr>
@@ -105,6 +101,7 @@ else
   lua require'lspconfig'.svelte.setup{on_attach=require'completion'.on_attach}
   lua require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
   lua require'lspconfig'.rls.setup{on_attach=require'completion'.on_attach}
+
   " Use <Tab> and <S-Tab> to navigate through popup menu
   inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
   inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
